@@ -1,0 +1,81 @@
+<div class="contact-wrapper jumptarget" id="contact">
+		<div class="banner contact-banner">
+			<div class="container">
+			<h2 innerHTML="{{title}}"> </h2>
+			</div>  <!-- End container -->
+		</div>    <!-- End banner about-banner -->
+		
+		<div class="container">
+			<div class="body"> 
+			<div class="clear"> </div>  <!--End clear -->
+			<div class="information-wrapper ">
+			<div class="fl">
+			<h5 class="no-border" innerHTML="{{contactname}}"></h5>
+			<h4 class="no-border" innerHTML="{{email}}"></h4>
+			<h4 class="no-border" innerHTML="{{mobilenumber}}"></h4>
+			<h4 class="no-border" innerHTML="{{address}}"></h4>
+			</div>
+			<div class="fr touch-wrapper">
+			<h3>Connect via</h3>
+			<ul>
+				 <li><img src="../assets/images/icon-in.png">
+				<span class="in">Linkedin
+				<a href="https://www.linkedin.com/in/ranjitraut" target="_blank">http://in.linkedin.com/ranjitraut</a> </span> 
+					<div class="clear"> </div>  <!--End clear -->
+				</li>
+				 <li><img src="../assets/images/icon-gplus.png">
+				<span>Google Plus 
+				<a href="https://plus.google.com/+RanjitRaut" target="_blank">https://plus.google.com/ranjitraut</a> </span> 
+				<div class="clear"> </div>  <!--End clear -->
+				</li>
+				 <li><img src="../assets/images/icon-skype.png">
+				<span class="skype">Skype
+				<p>raut.ranjit</p> </span> 
+					<div class="clear"> </div>  <!--End clear -->
+				</li>
+				<li><img src="../assets/images/icon-fb.png">
+				<span class="fb">Facebook
+				<a href="https://www.facebook.com/ranjitraut99" target="_blank">https://www.facebook.com/ranjitraut</a> </span> 
+					<div class="clear"> </div>  <!--End clear -->
+				</li>
+			</ul>
+			</div>   <!--End touch-wrapper -->
+			<div class="clear"> </div>  <!--End clear -->
+			</div> <!-- End information wrapper -->
+			<div class="clear"> </div>  <!--End clear -->
+			<div class="form-wrapper">
+					<p class="extra-bottom-margin">Please leave your message, I will get back to you. </p>
+					<form [formGroup]="userForm" (submit)="saveUser()">
+
+					<p class="no-bottom-margin half-width ">
+						<input type="text" formControlName="name" id="name" placeholder="Name" class="all-input" tabindex="1">
+						<control-messages [control]="userForm.controls.name"></control-messages>
+					</p>
+					<p class="no-bottom-margin half-width ">
+						<input type="text" formControlName="email" id="email" placeholder="Email" class="all-input" tabindex="1">
+						<control-messages [control]="userForm.controls.email"></control-messages>
+
+					</p>
+					<p class="extra-bottom-margin">
+						<textarea rows="5" cols="50" placeholder="Message" formControlName="profile" id="profile" class="all-input" tabindex="1"></textarea>
+						<control-messages [control]="userForm.controls.profile"></control-messages>
+					</p>
+					<input type="submit" value="Send" class="bt" [disabled]="!userForm.valid" tabindex="1">
+					<input type="button" value="Clear" class="bt clear-bt" tabindex="1" (click)="clearButton()">
+					<!-- <button type="submit" [disabled]="!userForm.valid" style="margin-bottom:50px;" class="send-bt animate">Submit</button> -->
+					
+				</form>
+			</div>
+
+
+		</div>  <!-- End body -->
+			
+			
+		 </div>  <!-- End container -->
+		 <div class="clear"> </div>  <!--End clear -->
+		 
+
+	</div>   <!-- End project-wrapper -->
+	
+
+	

@@ -1,0 +1,40 @@
+<div id="tabs-container">
+    <ul class="tabs-menu">
+      <li [ngClass]=" {'current': tab==1 }"><a (click)=" tab = 1 " href="javascript:void(0)">Logo</a></li>
+      <li [ngClass]=" {'current': tab==2 }"><a (click)=" tab = 2 " href="javascript:void(0)">Website</a></li>
+      <div class="clear"> </div>  <!--End clear -->
+    </ul>
+    <div class="tab">
+    <div  class="tab-content" *ngIf="tab==1">
+        <modal-gallery [modalImages]="images"
+              [downloadable]="false"
+              [slideConfig]="{infinite: false}"
+              (hasData)="onImageLoaded($event)"
+              (close)="onCloseImageModal($event)"
+              (show)="onVisibleIndex($event)"
+              (firstImage)="onIsFirstImage($event)"
+              (lastImage)="onIsLastImage($event)" class="gallery-item">
+        </modal-gallery>
+        <div class="clear"> </div>   <!-- End clear -->
+    </div> <!-- End tab-1 -->
+
+    <div class="tab-content" *ngIf="tab==2">
+       <modal-gallery [modalImages]="websiteimages"
+        [downloadable]="false"
+        [slideConfig]="{infinite: false}"
+        (hasData)="onImageLoaded($event)"
+        (close)="onCloseImageModal($event)"
+        (show)="onVisibleIndex($event)"
+        (firstImage)="onIsFirstImage($event)"
+        (lastImage)="onIsLastImage($event)" class="gallery-item">
+      </modal-gallery>
+    <div class="clear"> </div>   <!-- End clear -->
+    </div> <!-- End tab-2 -->
+
+   <div class="clear"> </div>  <!--End clear -->
+  
+  </div> <!-- End tab  -->
+  
+  <div class="clear"> </div>  <!--End clear -->
+  
+  </div> <!-- End tabs-container -->

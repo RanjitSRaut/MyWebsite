@@ -1,0 +1,48 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<app-home></app-home>
+<!-- Navigation Start Here -->
+<div  *ngIf="showNav" class="nav-wrapper" id="nav">
+    <div class="container"> 
+      <a href="#home" scrollTo class="small-logo"><img src="../assets/images/R-logo-small.jpg" alt="Logo" title="Ranjit Raut Portfolio of Web Developer"> </a>
+      <a href="javascript:void(0)" id="smartbutton" (click)="toggleMenu()">
+        <div class="buttonline"></div>
+        <div class="buttonline"></div>
+        <div class="buttonline"></div>
+      </a>
+      <div class="nav" [ngClass]="{'show': isMenuExpanded}">
+      <ul>	
+      <li><a href="#about" scrollTo class="active my-nav" (click)="hideMenu()">
+      <img src="../assets/images/nav-about-icon.png">
+      <span>About Me</span> </a></li>
+      
+      <li><a href="#portfolio" scrollTo class="my-nav" (click)="hideMenu()">
+      <img src="../assets/images/nav-porfolio-icon.png">
+      <span>My Work</span></a></li>
+      
+      <li><a href="#profile" scrollTo class="my-nav" (click)="hideMenu()">
+      <img src="../assets/images/nav-profile-icon.png">
+      <span>My Profile</span></a></li>
+      
+      <li><a href="#contact" class="navitem" scrollTo (click)="hideMenu()">
+       <img src="../assets/images/nav-contact-icon.png">
+      <span>Contact Me</span></a></li>
+      
+      <div class="clear"> </div>  <!--End clear -->
+      
+      </ul>
+      <div class="clear"> </div>  <!--End clear -->
+      </div> <!-- End nav -->
+      
+      </div>  <!-- End conatiner -->
+    
+    
+</div>  <!-- End Here nav-wrapper -->
+<!-- Navigation End Here -->
+<app-aboutme></app-aboutme>
+<app-mywork></app-mywork>
+<app-myprofile></app-myprofile>
+<app-contactme></app-contactme>
+<app-footer></app-footer>
+ 
+
+ 

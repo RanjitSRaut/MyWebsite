@@ -1,0 +1,14 @@
+#copyright { visibility:hidden; }
+.copyright-wrapper { background-color:#3B3B3B;}
+        
+.copyright-wrapper .container {  
+padding-top:10px;
+padding-bottom:10px;
+color:#989898;
+font-size: 12px;
+font-weight: normal;
+letter-spacing: .8px; }
+        
+.copyright-wrapper .container a { color:#2DB199; } 
+        
+.copyright-wrapper .container a:hover {   color:#269A85; text-decoration:underline; }
